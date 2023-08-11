@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Мои задачи</h1>
+        <select id="task-filter">
+          <option value="all">Все</option>
+          <option value="todo">Надо сделать</option>
+          <option value="in-progress">В процессе</option>
+          <option value="completed">Завершен</option>
+        </select>
+        <button class="add-task-btn">+ Добавить задачу</button>
+      </header>
+      <main>
+        <!-- В разметке, где располагается список задач -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Поиск задач..." />
+        </div>
+
+        <div class="task-list">
+          <!-- Здесь будут отображаться задачи -->
+        </div>
+        <!-- Темный фон (backdrop) -->
+        <div class="modal-backdrop"></div>
+        <!-- Модальное окно для добавления задачи -->
+        <div class="modal add-task-modal">
+          <h2>Добавить задачу</h2>
+          <label for="modal-task-title">Название:</label>
+          <input type="text" id="modal-task-title" />
+          <label for="modal-task-description">Описание:</label>
+          <textarea id="modal-task-description"></textarea>
+          <label for="modal-task-state">Статус:</label>
+          <select id="modal-task-state">
+            <option value="todo">Сделать</option>
+            <option value="in-progress">В процессе</option>
+            <option value="completed">Завершено</option>
+          </select>
+          <div class="modal-buttons">
+            <button class="save-btn">Сохранить</button>
+            <button class="cancel-btn">Отмена</button>
+          </div>
+        </div>
+        <!-- Модальное окно для редактирования задачи -->
+        <div class="modal edit-task-modal">
+          <h2>Редактировать задачу</h2>
+          <label for="edit-task-title">Название:</label>
+          <input type="text" id="edit-task-title" />
+          <label for="edit-task-description">Описание:</label>
+          <textarea id="edit-task-description"></textarea>
+          <label for="edit-task-state">Статус:</label>
+          <select id="edit-task-state">
+            <option value="todo">Сделать</option>
+            <option value="in-progress">В процессе</option>
+            <option value="completed">Завершено</option>
+          </select>
+          <div class="modal-buttons">
+            <button class="save-btn">Сохранить</button>
+            <button class="cancel-btn">Отмена</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>2023</p>
+      </footer>
+    </div>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/tasks.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/local-storage.js"></script>
+    <script src="scripts/filter.js"></script>
+    <script src="scripts/search.js"></script>
+  </body>
+</html>

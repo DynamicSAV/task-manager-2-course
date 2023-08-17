@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f7fa;
+  background-color: #8bb8fc;
   color: #333;
 }
 
@@ -23,6 +23,7 @@ header h1 {
 
 main {
   padding: 20px;
+  background-color: #d5dcfa;
 }
 
 footer {
@@ -34,10 +35,10 @@ footer {
 }
 
 .container {
-  max-width: 90%;
+  max-width: 1200px;
   height: 100%;
   margin: 20px auto;
-  padding: 20px;
+  padding: 2px;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -75,7 +76,6 @@ footer {
   border: none;
   resize: none;
   height: 200px;
-  white-space: pre;
 }
 
 /* Кнопки */
